@@ -1,23 +1,44 @@
-.transactions {
-    margin: 0 auto;
-    border-spacing: 0;
-    border: 1px solid black;
+.transactionsTable {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.tableHead {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(250, 250, 250);
+  font-size: 16px;
+  padding: 5px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.tableBodyRow {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+
+.tableBodyRow:nth-child(even) {
+  background-color: rgba(120, 120, 120, 0.3);
+}
+
+@media screen and (min-width: 375px) {
+  .tableHead {
+    font-size: 20px;
   }
-  
-  .transactionsTitle {
-    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (min-width: 768px) {
+  .tableHead {
+    padding: 15px;
   }
-  
-  .transactionsText {
-    border: 1px solid black;
-    color: white;
-    width: 150px;
+}
+
+@media screen and (min-width: 1440px) {
+  .transactionsTable {
+    max-width: 1440px;
   }
-  
-  .transactionsItems:nth-child(odd) {
-    background-color: rgba(128, 128, 128,0.4)
-  }
-  
-  .transactionsValue {
-    border: 1px solid black;
-  }
+}
